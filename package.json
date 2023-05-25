@@ -7,5 +7,11 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kianfang/hexo-theme-kian.git"
-  }
+  },
+  "keywords": [
+    "hexo",
+    "hexo-theme",
+    "hexo-theme-kian",
+    "kian"
+  ]
 }

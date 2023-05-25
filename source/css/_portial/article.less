@@ -1,36 +1,45 @@
 @import "../_variables.less";
 
+.article-wrapper {
+  display: flex;
+  gap: 0 20px;
+}
+
 .article-entry {
+  flex: 1;
+  overflow: hidden;
+  color: @color_3;
+
   h1 {
-    font-size: 2em;
+    font-size: 2rem;
     font-weight: bold;
     line-height: 1.1em;
-    margin: 1.1em 0;
+    margin-bottom: 1em;
   }
 
   h2 {
-    font-size: 1.5em;
+    font-size: 1.5rem;
     font-weight: bold;
     line-height: 1.1em;
     margin: 1.1em 0;
   }
 
   h3 {
-    font-size: 1.3em;
+    font-size: 1.3rem;
     font-weight: bold;
     line-height: 1.1em;
     margin: 1.1em 0;
   }
 
   h4 {
-    font-size: 1.2em;
+    font-size: 1.2rem;
     font-weight: bold;
     line-height: 1.1em;
     margin: 1.1em 0;
   }
 
   h5 {
-    font-size: 1em;
+    font-size: 1rem;
     font-weight: bold;
     line-height: 1.1em;
     margin: 1.1em 0;
@@ -134,9 +143,6 @@
   dt {
     font-weight: bold;
   }
-
-  color: @color_3;
-  padding: 0 20px;
 
   p {
     line-height: 1.6em;
@@ -289,7 +295,6 @@
 
   .highlight {
     background: #2d2d2d;
-    margin: 0 -20px;
     padding: 15px 20px;
     border-style: solid;
     border-color: @border_color;
@@ -349,6 +354,13 @@
   }
 
   .gist {
+    margin: 0 -20px;
+    border-style: solid;
+    border-color: @border_color;
+    border-width: 1px 0;
+    background: #2d2d2d;
+    padding: 15px 20px 15px 0;
+
     .gist-file {
       .gist-data {
         .line-numbers {
@@ -397,12 +409,6 @@
       }
     }
 
-    margin: 0 -20px;
-    border-style: solid;
-    border-color: @border_color;
-    border-width: 1px 0;
-    background: #2d2d2d;
-    padding: 15px 20px 15px 0;
   }
 
   code {
@@ -410,5 +416,18 @@
     background: #eee;
     text-shadow: 0 1px #fff;
     padding: 0 0.3em;
+  }
+}
+
+// 文章目录
+.toc {
+  width: max-content;
+  height: max-content;
+  position: sticky;
+  top: 0;
+  font-size: 12px;
+
+  &-item {
+    margin-bottom: 10px;
   }
 }
