@@ -1,7 +1,36 @@
 .widget {
+  border: 1px solid var(--border-color);
+  padding: 10px;
+
+  &-wrap {
+    margin-bottom: 20px;
+  }
+
+  &-title {
+    margin-bottom: 10px;
+  }
 
   .archive-list,
   .post-list {
     list-style: none;
+  }
+
+  .archive-list {
+    &-item {
+      font-size: 0.85rem;
+    }
+  }
+
+  .post-list {
+    &-item {
+      margin-bottom: 4px;
+      font-size: 0.85rem;
+    }
+  }
+
+  &.tagcloud {
+    a {
+      display: inline-block;
+    }
   }
 }

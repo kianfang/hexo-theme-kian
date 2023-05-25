@@ -1,5 +1,11 @@
 @import "./_variables.less";
 
+:root {
+  --link-color: @primary-color;
+  --border-color: @gray-2;
+  --layout-gap-size: 20px;
+}
+
 html {
   width: 100%;
 }
@@ -7,17 +13,17 @@ html {
 body {
   width: 100%;
   min-height: 100vh;
-  background: #fff;
+  background: var(--background-color, transparent);
   font: 14px @font-sans;
   display: grid;
   grid-template-areas: 
   "header header" 
-  "default sidebar" 
+  "content sidebar" 
   "footer footer";
   grid-template-rows: 100px 1fr 100px;
   // 不加minmax会导致被撑开
   grid-template-columns: minmax(0, 1fr) 300px;
-  gap: 20px;
+  gap: var(--layout-gap-size);
 }
 
 body, div, ul, ol, li, span, h1, h2, h3, h4, h5, h6, p, figure, input, button {
@@ -25,19 +31,56 @@ body, div, ul, ol, li, span, h1, h2, h3, h4, h5, h6, p, figure, input, button {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+  color: var(--link-color);
+
+  &:visited {
+    color: var(--link-color);
+  }
+}
+
 #header {
   grid-area: header;
 }
 
+#content {
+  grid-area: content;
+  margin-left: var(--layout-gap-size);
+}
+
 #sidebar {
-  height: max-content;
   grid-area: sidebar;
+  height: max-content;
   position: sticky;
   top: 0;
+  margin-right: var(--layout-gap-size);
 }
 
 #footer {
   grid-area: footer;
+}
+
+@media (max-width: 960px) {
+  body {
+    grid-template-areas:
+      "header"
+      "content"
+      "footer";
+    // 不加minmax会导致被撑开
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  #content {
+    margin-right: var(--layout-gap-size);
+  }
+
+  #sidebar {
+    display: none;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
 }
 
 @import "./_portial/highlight.less";

@@ -2,13 +2,15 @@
 
 .article-wrapper {
   display: flex;
-  gap: 0 20px;
+  gap: 0 var(--layout-gap-size);
 }
 
 .article-entry {
   flex: 1;
   overflow: hidden;
-  color: @color_3;
+  color: @gray-9;
+  border: 1px solid var(--border-color);
+  padding: 20px 10px;
 
   h1 {
     font-size: 2rem;
@@ -47,7 +49,7 @@
 
   h6 {
     font-size: 1em;
-    color: @color_1;
+    color: @gray-7;
     font-weight: bold;
     line-height: 1.1em;
     margin: 1.1em 0;
@@ -158,7 +160,7 @@
   }
 
   a {
-    color: @color_7;
+    color: @primary-color;
     text-decoration: none;
 
     &:hover {
@@ -232,7 +234,7 @@
   }
 
   .caption {
-    color: @color_1;
+    color: @gray-7;
     display: block;
     font-size: 0.9em;
     margin-top: 0.5em;
@@ -279,10 +281,10 @@
     margin: 0 -20px;
     padding: 15px 20px;
     border-style: solid;
-    border-color: @border_color;
+    border-color: var(--border-color);
     border-width: 1px 0;
     overflow: auto;
-    color: @color_6;
+    color: @gray-6;
     line-height: 22.400000000000002px;
     font-family: @font-mono;
 
@@ -297,15 +299,15 @@
     background: #2d2d2d;
     padding: 15px 20px;
     border-style: solid;
-    border-color: @border_color;
+    border-color: var(--border-color);
     border-width: 1px 0;
     overflow: auto;
-    color: @color_6;
+    color: @gray-6;
     line-height: 22.400000000000002px;
 
     .gutter {
       pre {
-        color: @color_9;
+        color: @gray-8;
         font-size: 0.85em;
         text-align: right;
         padding-right: 20px;
@@ -335,7 +337,7 @@
 
     figcaption {
       font-size: 0.85em;
-      color: @color_1;
+      color: @gray-7;
       line-height: 1em;
       margin-bottom: 1em;
 
@@ -356,7 +358,7 @@
   .gist {
     margin: 0 -20px;
     border-style: solid;
-    border-color: @border_color;
+    border-color: var(--border-color);
     border-width: 1px 0;
     background: #2d2d2d;
     padding: 15px 20px 15px 0;
@@ -364,7 +366,7 @@
     .gist-file {
       .gist-data {
         .line-numbers {
-          color: @color_9;
+          color: @gray-8;
           font-size: 0.85em;
           background: none;
           border: none;
@@ -391,7 +393,7 @@
 
       .gist-meta {
         background: #2d2d2d;
-        color: @color_1;
+        color: @gray-7;
         font: 0.85em -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
         text-shadow: 0 0;
         padding: 0;
@@ -399,7 +401,7 @@
         margin-left: 20px;
 
         a {
-          color: @color_7;
+          color: @primary-color;
           font-weight: normal;
 
           &:hover {
@@ -425,9 +427,20 @@
   height: max-content;
   position: sticky;
   top: 0;
-  font-size: 12px;
+  font-size: 0.85rem;
+  list-style: none;
+  border: 1px solid var(--border-color);
+  padding: 20px 10px;
 
   &-item {
     margin-bottom: 10px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  
+  .toc {
+    display: none;
   }
 }
