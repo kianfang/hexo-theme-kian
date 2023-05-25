@@ -1,0 +1,414 @@
+@import "../_variables.less";
+
+.article-entry {
+  h1 {
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 1.1em;
+    margin: 1.1em 0;
+  }
+
+  h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 1.1em;
+    margin: 1.1em 0;
+  }
+
+  h3 {
+    font-size: 1.3em;
+    font-weight: bold;
+    line-height: 1.1em;
+    margin: 1.1em 0;
+  }
+
+  h4 {
+    font-size: 1.2em;
+    font-weight: bold;
+    line-height: 1.1em;
+    margin: 1.1em 0;
+  }
+
+  h5 {
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 1.1em;
+    margin: 1.1em 0;
+  }
+
+  h6 {
+    font-size: 1em;
+    color: @color_1;
+    font-weight: bold;
+    line-height: 1.1em;
+    margin: 1.1em 0;
+  }
+
+  hr {
+    border: 1px dashed #ddd;
+  }
+
+  strong {
+    font-weight: bold;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  cite {
+    font-style: italic;
+  }
+
+  sup {
+    font-size: 0.75em;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+    top: -0.5em;
+  }
+
+  sub {
+    font-size: 0.75em;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+    bottom: -0.2em;
+  }
+
+  small {
+    font-size: 0.85em;
+  }
+
+  acronym {
+    border-bottom: 1px dotted;
+  }
+
+  abbr {
+    border-bottom: 1px dotted;
+  }
+
+  ul {
+    margin: 0 20px;
+    line-height: 1.6em;
+    list-style: disc;
+    margin-top: 1.6em;
+    margin-bottom: 1.6em;
+
+    ul {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    ol {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  ol {
+    margin: 0 20px;
+    line-height: 1.6em;
+    list-style: decimal;
+    margin-top: 1.6em;
+    margin-bottom: 1.6em;
+
+    ul {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    ol {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  dl {
+    margin: 0 20px;
+    line-height: 1.6em;
+    margin-top: 1.6em;
+    margin-bottom: 1.6em;
+  }
+
+  dt {
+    font-weight: bold;
+  }
+
+  color: @color_3;
+  padding: 0 20px;
+
+  p {
+    line-height: 1.6em;
+    margin: 1.6em 0;
+  }
+
+  table {
+    line-height: 1.6em;
+    margin: 1.6em 0;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  a {
+    color: @color_7;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+
+  video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+
+  iframe {
+    border: none;
+  }
+
+  th {
+    font-weight: bold;
+    border-bottom: 3px solid #ddd;
+    padding-bottom: 0.5em;
+  }
+
+  td {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+  }
+
+  blockquote {
+    font-family: @font-serif;
+    margin: 0;
+    padding: 0 1em;
+    border-left: 5px solid #ddd;
+
+    footer {
+      font-size: 14px;
+      margin: 1.6em 0;
+      font-family: @font-sans;
+
+      cite {
+        &:before {
+          content: "—";
+          padding: 0 0.5em;
+        }
+      }
+    }
+  }
+
+  .pullquote {
+    text-align: left;
+    width: 45%;
+    margin: 0;
+  }
+
+  .pullquote.left {
+    margin-left: 0.5em;
+    margin-right: 1em;
+  }
+
+  .pullquote.right {
+    margin-right: 0.5em;
+    margin-left: 1em;
+  }
+
+  .caption {
+    color: @color_1;
+    display: block;
+    font-size: 0.9em;
+    margin-top: 0.5em;
+    position: relative;
+    text-align: center;
+  }
+
+  .video-container {
+    position: relative;
+    padding-top: 56.25%;
+    height: 0;
+    overflow: hidden;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      margin-top: 0;
+    }
+
+    object {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      margin-top: 0;
+    }
+
+    embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      margin-top: 0;
+    }
+  }
+
+  pre {
+    background: #2d2d2d;
+    margin: 0 -20px;
+    padding: 15px 20px;
+    border-style: solid;
+    border-color: @border_color;
+    border-width: 1px 0;
+    overflow: auto;
+    color: @color_6;
+    line-height: 22.400000000000002px;
+    font-family: @font-mono;
+
+    code {
+      background: none;
+      text-shadow: none;
+      padding: 0;
+    }
+  }
+
+  .highlight {
+    background: #2d2d2d;
+    margin: 0 -20px;
+    padding: 15px 20px;
+    border-style: solid;
+    border-color: @border_color;
+    border-width: 1px 0;
+    overflow: auto;
+    color: @color_6;
+    line-height: 22.400000000000002px;
+
+    .gutter {
+      pre {
+        color: @color_9;
+        font-size: 0.85em;
+        text-align: right;
+        padding-right: 20px;
+      }
+
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+
+    pre {
+      border: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    table {
+      margin: 0;
+      width: auto;
+    }
+
+    td {
+      border: none;
+      padding: 0;
+    }
+
+    figcaption {
+      font-size: 0.85em;
+      color: @color_1;
+      line-height: 1em;
+      margin-bottom: 1em;
+
+      a {
+        float: right;
+      }
+    }
+
+    .line {
+      height: 22.400000000000002px;
+    }
+
+    .line.marked {
+      background: #515151;
+    }
+  }
+
+  .gist {
+    .gist-file {
+      .gist-data {
+        .line-numbers {
+          color: @color_9;
+          font-size: 0.85em;
+          background: none;
+          border: none;
+          padding: 0 20px 0 0;
+        }
+
+        background: none;
+        border: none;
+
+        .line-data {
+          padding: 0 !important;
+        }
+      }
+
+      border: none;
+      font-family: @font-mono;
+      margin: 0;
+
+      .highlight {
+        margin: 0;
+        padding: 0;
+        border: none;
+      }
+
+      .gist-meta {
+        background: #2d2d2d;
+        color: @color_1;
+        font: 0.85em -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+        text-shadow: 0 0;
+        padding: 0;
+        margin-top: 1em;
+        margin-left: 20px;
+
+        a {
+          color: @color_7;
+          font-weight: normal;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    margin: 0 -20px;
+    border-style: solid;
+    border-color: @border_color;
+    border-width: 1px 0;
+    background: #2d2d2d;
+    padding: 15px 20px 15px 0;
+  }
+
+  code {
+    font-family: @font-mono;
+    background: #eee;
+    text-shadow: 0 1px #fff;
+    padding: 0 0.3em;
+  }
+}

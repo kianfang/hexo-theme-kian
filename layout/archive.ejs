@@ -1,0 +1,12 @@
+<% page.posts.each(article => { %>
+  <div class="archive-item">
+    <a href="<%=url_for(article.path)%>">
+      <%=article.title%>
+    </a>
+    <time datetime="<%=date_xml(article.date)%>">
+      <%=date(article.date)%>
+    </time>
+  </div>
+<% }) %>
+
+<%- partial('_partial/pagination') %>

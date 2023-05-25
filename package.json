@@ -1,0 +1,11 @@
+{
+  "name": "hexo-theme-kian",
+  "version": "0.1.0",
+  "description": "Hexo theme for Kian",
+  "author": "kianfang",
+  "homepage": "https://www.kianfang.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kianfang/hexo-theme-kian.git"
+  }
+}
