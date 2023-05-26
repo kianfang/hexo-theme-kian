@@ -1,14 +1,34 @@
-// Base16 / Monokai theme
-// Reference: https://highlightjs.org/static/demo/
+// 代码高亮样式
 .highlight {
-  color: #f8f8f2;
+  &, pre {
+    color: var(--highlight-color);
+  }
+
+  // 行号
+  .gutter {
+    background: var(--highlight-background-color);
+
+    pre {
+      color: @gray-7;
+    }
+  }
+
+  // 代码行
+  .line { 
+    &.marked {
+      background: #49483e;
+    }
+  }
+
+  // 以下是参考 Base16 / Monokai 主题配色
+  // Reference: https://highlightjs.org/static/demo/
   background: var(--highlight-background-color);
 
   ::selection {
     background-color: #49483e;
-    color: #f8f8f2
+    color: var(--highlight-color);
   }
-
+  
   .comment {
     color: #75715e
   }
@@ -20,7 +40,7 @@
   .operator,
   .punctuation,
   .subst {
-    color: #f8f8f2
+    color: var(--highlight-color);
   }
 
   .operator {

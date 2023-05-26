@@ -21,3 +21,7 @@ widgets:
 - tagcloud
 - archive
 - recent_posts
+
+less:
+  options:
+    javascriptEnabled: true
