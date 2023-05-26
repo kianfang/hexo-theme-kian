@@ -1,9 +1,18 @@
 <div class="article-wrapper">
   <%- toc(page.content, { list_number: false }) %>
 
-  <article id="post" class="article-entry">
-    <h1><%=page.title%></h1>
-    <%-page.content%>
+  <article id="post" class="article">
+    <h1 class="article-title"><%= page.title %></h1>
+    <%- page.content %>
+
+    <footer class="article-footer">
+      <span class="publish-time">
+        发布于：<time class="article-time"><%= page.date.format('YYYY-MM-DD HH:mm') %></time>
+      </span>
+      <!--span class="update-time">
+        更新于：<time class="article-time"><%= page.updated.format('YYYY-MM-DD HH:mm') %></time>
+      </span-->
+    </footer>
   </article>
 </div>
 

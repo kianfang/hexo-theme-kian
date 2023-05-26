@@ -1,15 +1,28 @@
 @import "../_variables.less";
 
-.article-wrapper {
-  display: flex;
-  gap: 0 var(--layout-gap-size);
-}
-
-.article-entry {
+.article {
   flex: 1;
   overflow: hidden;
   border: 1px solid var(--border-color);
   padding: 20px 15px;
+
+  &-wrapper {
+    display: flex;
+    gap: 0 var(--layout-gap-size);
+  }
+
+  &-footer {
+    padding-top: 1em;
+    border-top: 1px solid var(--border-color);
+    color: @gray-6;
+    display: flex;
+    flex-direction: row;
+    gap: 0 20px;
+  }
+
+  &-time {
+    font-size: 0.85rem;
+  }
 
   h1 {
     font-size: 2rem;
@@ -404,6 +417,7 @@
   list-style: none;
   border: 1px solid var(--border-color);
   padding: 20px 10px;
+  max-width: 200px;
 
   &-item {
     margin-bottom: 10px;
@@ -411,7 +425,7 @@
 }
 
 @media (max-width: 768px) {
-  .article-entry {
+  .article {
     border: none;
     padding-left: 0;
     padding-right: 0;

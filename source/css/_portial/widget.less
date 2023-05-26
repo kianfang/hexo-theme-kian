@@ -19,6 +19,20 @@
     &-item {
       font-size: 0.85rem;
     }
+
+    &-count {
+      color: @gray-5;
+      margin-left: 4px;
+      font-size: 0.75rem;
+
+      &::before {
+        content: "(";
+      }
+
+      &::after {
+        content: ")";
+      }
+    }
   }
 
   .post-list {
