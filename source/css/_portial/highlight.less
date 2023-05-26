@@ -1,9 +1,105 @@
+// Base16 / Monokai theme
+// Reference: https://highlightjs.org/static/demo/
 .highlight {
-  .keyword {
-    color: #c9c;
+  color: #f8f8f2;
+  background: var(--highlight-background-color);
+
+  ::selection {
+    background-color: #49483e;
+    color: #f8f8f2
   }
 
-  .number {
-    color: #f99157;
+  .comment {
+    color: #75715e
   }
+
+  .tag {
+    color: #a59f85
+  }
+
+  .operator,
+  .punctuation,
+  .subst {
+    color: #f8f8f2
+  }
+
+  .operator {
+    opacity: .7
+  }
+
+  .bullet,
+  .deletion,
+  .name,
+  .selector-tag,
+  .template-variable,
+  .variable {
+    color: #f92672
+  }
+
+  .attr,
+  .link,
+  .literal,
+  .number,
+  .symbol,
+  .variable.constant_ {
+    color: #fd971f
+  }
+
+  .class .title,
+  .title,
+  .title.class_ {
+    color: #f4bf75
+  }
+
+  .strong {
+    font-weight: 700;
+    color: #f4bf75
+  }
+
+  .addition,
+  .code,
+  .string,
+  .title.class_.inherited__ {
+    color: #a6e22e
+  }
+
+  .built_in,
+  .doctag,
+  .keyword.atrule,
+  .quote,
+  .regexp {
+    color: #a1efe4
+  }
+
+  .attribute,
+  .function .title,
+  .section,
+  .title.function_,
+  .ruby .property {
+    color: #66d9ef
+  }
+
+  .diff .meta,
+  .keyword,
+  .template-tag,
+  .type {
+    color: #ae81ff
+  }
+
+  .emphasis {
+    color: #ae81ff;
+    font-style: italic
+  }
+
+  .meta,
+  .meta .keyword,
+  .meta .string {
+    color: #c63
+  }
+
+  .meta .keyword,
+  .meta-keyword {
+    font-weight: 700
+  }
+
 }

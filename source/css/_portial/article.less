@@ -277,7 +277,7 @@
   }
 
   pre {
-    background: #2d2d2d;
+    background: var(--highlight-background-color);
     margin: 0 -20px;
     padding: 15px 20px;
     border-style: solid;
@@ -296,13 +296,11 @@
   }
 
   .highlight {
-    background: #2d2d2d;
     padding: 15px 20px;
     border-style: solid;
     border-color: var(--border-color);
     border-width: 1px 0;
     overflow: auto;
-    color: @gray-6;
     line-height: 22.400000000000002px;
 
     .gutter {
@@ -360,7 +358,7 @@
     border-style: solid;
     border-color: var(--border-color);
     border-width: 1px 0;
-    background: #2d2d2d;
+    background: var(--highlight-background-color);
     padding: 15px 20px 15px 0;
 
     .gist-file {
@@ -392,9 +390,9 @@
       }
 
       .gist-meta {
-        background: #2d2d2d;
+        background: var(--highlight-background-color);
         color: @gray-7;
-        font: 0.85em -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+        font: 0.85em @font-sans;
         text-shadow: 0 0;
         padding: 0;
         margin-top: 1em;
