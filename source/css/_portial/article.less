@@ -8,51 +8,52 @@
 .article-entry {
   flex: 1;
   overflow: hidden;
-  color: @gray-9;
   border: 1px solid var(--border-color);
   padding: 20px 15px;
 
   h1 {
     font-size: 2rem;
-    font-weight: bold;
-    line-height: 1.1em;
-    margin-bottom: 1em;
+    font-weight: 1000;
+    line-height: 2em;
+    padding-bottom: 0.2em;
+    margin-bottom: 0.8em;
+    border-bottom: 1px solid var(--border-color);
   }
 
   h2 {
     font-size: 1.5rem;
-    font-weight: bold;
-    line-height: 1.1em;
-    margin: 1.1em 0;
+    font-weight: 900;
+    line-height: 1.8em;
+    margin: 1em 0;
   }
 
   h3 {
     font-size: 1.3rem;
-    font-weight: bold;
-    line-height: 1.1em;
-    margin: 1.1em 0;
+    font-weight: 800;
+    line-height: 1.8em;
+    margin: 1em 0;
   }
 
   h4 {
     font-size: 1.2rem;
-    font-weight: bold;
-    line-height: 1.1em;
-    margin: 1.1em 0;
+    font-weight: 700;
+    line-height: 1.6em;
+    margin: 1em 0;
   }
 
   h5 {
     font-size: 1rem;
-    font-weight: bold;
-    line-height: 1.1em;
-    margin: 1.1em 0;
+    font-weight: 600;
+    line-height: 1.6em;
+    margin: 1em 0;
   }
 
   h6 {
     font-size: 1em;
     color: @gray-7;
-    font-weight: bold;
-    line-height: 1.1em;
-    margin: 1.1em 0;
+    font-weight: 500;
+    line-height: 1.6em;
+    margin: 1em 0;
   }
 
   hr {
@@ -101,59 +102,38 @@
 
   ul {
     margin: 0 20px;
-    line-height: 1.6em;
+    line-height: 1.2em;
     list-style: disc;
-    margin-top: 1.6em;
-    margin-bottom: 1.6em;
-
-    ul {
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-
-    ol {
-      margin-top: 0;
-      margin-bottom: 0;
-    }
   }
 
   ol {
     margin: 0 20px;
-    line-height: 1.6em;
+    line-height: 1.2em;
     list-style: decimal;
-    margin-top: 1.6em;
-    margin-bottom: 1.6em;
-
-    ul {
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-
-    ol {
-      margin-top: 0;
-      margin-bottom: 0;
-    }
   }
 
   dl {
     margin: 0 20px;
-    line-height: 1.6em;
-    margin-top: 1.6em;
-    margin-bottom: 1.6em;
+    line-height: 1.2em;
+    margin: 1em 0;
   }
 
   dt {
     font-weight: bold;
   }
 
+  li {
+    line-height: 1.6em;
+  }
+
   p {
     line-height: 1.6em;
-    margin: 1.6em 0;
+    margin: 1em 0;
   }
 
   table {
-    line-height: 1.6em;
-    margin: 1.6em 0;
+    line-height: 1.2em;
+    margin: 1em 0;
     width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
@@ -172,14 +152,14 @@
     max-width: 100%;
     height: auto;
     display: block;
-    margin: auto;
+    margin: 0.3em auto;
   }
 
   video {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: auto;
+    margin: 0.3em auto;
   }
 
   iframe {
@@ -201,12 +181,13 @@
     font-family: @font-serif;
     margin: 0;
     padding: 0 1em;
+    margin: 1em 0;
     border-left: 5px solid var(--blockquote-border-color);
     color: var(--blockquote-color);
 
     footer {
       font-size: 14px;
-      margin: 1.6em 0;
+      margin: 1em 0;
       font-family: @font-sans;
 
       cite {
@@ -334,6 +315,9 @@
       color: @gray-7;
       line-height: 1em;
       margin-bottom: 1em;
+      padding: 0 15px;
+      position: sticky;
+      left: 0;
 
       a {
         float: right;
@@ -350,7 +334,7 @@
     border-style: solid;
     border-color: var(--border-color);
     border-width: 1px 0;
-    background: var(--highlight-background-color);
+    background: var(--highlight-bg-color);
     padding: 15px 20px 15px 0;
 
     .gist-file {
@@ -382,7 +366,7 @@
       }
 
       .gist-meta {
-        background: var(--highlight-background-color);
+        background: var(--highlight-bg-color);
         color: @gray-7;
         font: 0.85em @font-sans;
         text-shadow: 0 0;
@@ -415,7 +399,7 @@
   width: max-content;
   height: max-content;
   position: sticky;
-  top: 0;
+  top: var(--layout-gap-size);
   font-size: 0.85rem;
   list-style: none;
   border: 1px solid var(--border-color);
@@ -426,9 +410,13 @@
   }
 }
 
-
 @media (max-width: 768px) {
-  
+  .article-entry {
+    border: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .toc {
     display: none;
   }

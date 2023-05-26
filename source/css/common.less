@@ -1,11 +1,13 @@
 @import "./_variables.less";
 
 :root {
+  --font-color: @gray-9;
   --link-color: @primary-color;
   --border-color: @gray-2;
   --layout-gap-size: 20px;
+  --header-bg-color: @gray-9;
   // 代码高亮颜色
-  --highlight-background-color: #272822;
+  --highlight-bg-color: #272822;
   --highlight-color: #f8f8f2;
   --code-color: #c7354d;
   --blockquote-color: @gray-7;
@@ -19,17 +21,18 @@ html {
 body {
   width: 100%;
   min-height: 100vh;
-  background: var(--background-color, transparent);
+  background: var(--bg-color, transparent);
   font: 14px @font-sans;
   display: grid;
   grid-template-areas: 
   "header header" 
   "content sidebar" 
   "footer footer";
-  grid-template-rows: 100px 1fr 100px;
+  grid-template-rows: auto 1fr auto;
   // 不加minmax会导致被撑开
   grid-template-columns: minmax(0, 1fr) 300px;
   gap: var(--layout-gap-size);
+  color: var(--font-color);
 }
 
 body, div, ul, ol, li, span, h1, h2, h3, h4, h5, h6, p, figure, input, button {
@@ -59,12 +62,22 @@ a {
   grid-area: sidebar;
   height: max-content;
   position: sticky;
-  top: 0;
+  top: var(--layout-gap-size);
   margin-right: var(--layout-gap-size);
 }
 
 #footer {
   grid-area: footer;
+}
+
+#header, #footer {
+  background-color: var(--header-bg-color);
+  padding: var(--layout-gap-size);
+
+  &, a {
+    color: @gray-1;
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 960px) {
@@ -87,6 +100,22 @@ a {
 }
 
 @media (prefers-color-scheme: dark) {
+  :root {
+    --font-color: @gray-2;
+    --bg-color: @gray-10;
+    --border-color: @gray-8;
+    --blockquote-color: @gray-4;
+    --blockquote-border-color: @gray-9;
+    --header-bg-color: @gray-10;
+  }
+
+  #header {
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  #footer {
+    border-top: 1px solid var(--border-color);
+  }
 }
 
 @import "./_portial/article.less";
