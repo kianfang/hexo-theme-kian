@@ -1,16 +1,13 @@
-
-<ul>
+<ul class="card-list">
 <% if (page.posts.length > 0) { %>
-  <li>
-    <% page.posts.sort('date', -1).limit(10).each(post => { %>
-      <div class="recent-post-item">
-        <a href="<%=url_for(post.path)%>"><%=post.title%></a>
-        <time datetime="<%=post.date.toJSON()%>">
-          <%=date(post.date)%>
-        </time>
-      </div>
-    <% }); %>
-  </li>
+  <% page.posts.sort('date', -1).limit(10).each(post => { %>
+    <li class="card">
+      <a href="<%=url_for(post.path)%>"><%= post.title %></a>
+      <time datetime="<%=post.date.toJSON()%>">
+        <%= date(post.date) %>
+      </time>
+    </li>
+  <% }); %>
 <% } %>
 </ul>
 

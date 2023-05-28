@@ -1,0 +1,29 @@
+@import '../_variables.less';
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  gap: 0 10px;
+
+  .page-number {
+
+    &.current {
+      background-color: @primary-color;
+      color: #fff;
+    }
+  }
+
+  .page-number, .prev, .next {
+    display: block;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    border: 1px solid @primary-color;
+    border-radius: 4px;
+    padding: 0 10px;
+  }
+
+  .prev, .next {
+
+  }
+}

@@ -8,10 +8,6 @@ menu:
   首页: /
   归档: /archives
 
-# stylesheets loaded in the <head>
-stylesheets:
-- /css/common.css
-
 # scripts loaded in the end of the body
 scripts:
 - /js/common.js

@@ -11,10 +11,8 @@ pageTitle += ' [ ' + config.title + ' ]';
 <head>
   <meta charset="UTF-8">
   <title><%=pageTitle%></title>
-  <% if (theme.stylesheets !== undefined && theme.stylesheets.length > 0) { %>
-    <!-- stylesheets list from _config.yml -->
-    <% theme.stylesheets.forEach(url => { %>
-      <link rel="stylesheet" href="<%=url%>">
-    <% }); %>
-  <% } %>
+  <%- css('css/common.css') %>
+  <%- is_home() ? css('css/home.css') : '' %>
+  <%- is_post() ? css('css/article.css') : '' %>
+  <%- is_archive() ? css('css/archive.css') : '' %>
 </head>

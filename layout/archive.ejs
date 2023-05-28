@@ -1,12 +1,30 @@
-<% page.posts.each(article => { %>
-  <div class="archive-item">
-    <a href="<%=url_for(article.path)%>">
-      <%=article.title%>
-    </a>
-    <time datetime="<%=date_xml(article.date)%>">
-      <%=date(article.date)%>
-    </time>
-  </div>
+<% var last; %>
+<% page.posts.each(function(article, i) { %>
+  <% var year = article.date.year(); %>
+  <% if (last != year) { %>
+    <% if (last != null) { %>
+  </ul>
+</section>
+    <% } %>
+    <% last = year; %>
+<section class="archive">
+  <h4 class="archive-title">
+    <a href="<%- url_for(config.archive_dir + '/' + year) %>" class="archive-year"><%= year %></a>
+  </h4>
+  <ul class="card-list">
+  <% } %>
+    <li class="card card-<%= article.layout %>">
+      <time datetime="<%=date_xml(article.date)%>">
+        <%= date(article.date, 'MMM D') %>
+      </time>
+      <a href="<%=url_for(article.path)%>">
+        <%= article.title %>
+      </a>
+    </li>
 <% }) %>
+<% if (page.posts.length) { %>
+  </ul>
+</section>
+<% } %>
 
 <%- partial('_partial/pagination') %>

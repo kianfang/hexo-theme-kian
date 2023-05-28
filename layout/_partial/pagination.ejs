@@ -1,8 +1,9 @@
+<% if (page.total > 1) { %>
 <div id="pagination" class="pagination">
-  <% var prev_text = "&laquo; " + __('prev');var next_text = __('next') + " &raquo;"%>
   <%- paginator({
-    prev_text,
-    next_text,
+    prev_text: __('prev'),
+    next_text: __('next'),
     escape: false
   }) %>
 </div>
+<% } %>
