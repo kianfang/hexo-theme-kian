@@ -65,9 +65,11 @@ a {
 
 #header {
   grid-area: header;
+  z-index: 3;
 }
 
 #content {
+  z-index: 1;
   grid-area: content;
 
   &:has(+#sidebar) {
@@ -76,6 +78,7 @@ a {
 }
 
 #sidebar {
+  z-index: 2;
   grid-area: sidebar;
   height: max-content;
   position: sticky;
@@ -93,7 +96,6 @@ a {
 
   &, a {
     color: @gray-1;
-    font-size: 16px;
   }
 
   a:hover {
@@ -106,6 +108,9 @@ a {
   display: flex;
   flex-direction: row;
   gap: 0 10px;
+  a {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 1080px) {

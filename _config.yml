@@ -9,7 +9,7 @@ menu:
 
 # scripts loaded in the end of the body
 scripts:
-- /js/common.js
+- /js/common.mjs
 
 widgets:
 - category
@@ -21,6 +21,8 @@ less:
   options:
     javascriptEnabled: true
 
+# giscus 评论系统
+# https://giscus.app/
 giscus:
   enable: false
   repo: kianfang/hexo-theme-kian
