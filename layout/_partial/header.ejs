@@ -1,7 +1,7 @@
 <header id="header">
   <menu id="menu">
     <% Object.keys(theme.menu).forEach(key => { %>
-      <a href="<%=theme.menu[key]%>"><%=key%></a>
+      <a href="<%= theme.menu[key] %>"><%= __(key) %></a>
     <% }); %>
   </menu>
 </header>

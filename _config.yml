@@ -5,8 +5,7 @@ language:
 
 # main menu navigation
 menu:
-  首页: /
-  归档: /archives
+  Home: /
 
 # scripts loaded in the end of the body
 scripts:
@@ -21,3 +20,17 @@ widgets:
 less:
   options:
     javascriptEnabled: true
+
+giscus:
+  enable: false
+  repo: kianfang/hexo-theme-kian
+  repo_id: R_kgDOJnV4AQ
+  category: General
+  category_id: DIC_kwDOJnV4Ac4CW0uc
+  mapping: specific
+  strict: 1
+  reactions_enabled: 1
+  emit_metadata: 0
+  input_position: bottom
+  theme: preferred_color_scheme
+  loading: lazy

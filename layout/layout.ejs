@@ -9,7 +9,9 @@
   <%- body %>
 </main>
 
+<% if (!page.hideSidebar) { %>
 <%- partial('_partial/sidebar') %>
+<% } %>
 
 <%- partial('_partial/footer') %>
 </body>

@@ -34,6 +34,15 @@ body {
   grid-template-columns: minmax(0, 1fr) 300px;
   gap: var(--layout-gap-size);
   color: var(--font-color);
+
+  &:not(:has( #sidebar)) {
+    grid-template-areas:
+      "header"
+      "content"
+      "footer";
+    // 不加minmax会导致被撑开
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 body, menu, aside, div, ul, ol, li, span, h1, h2, h3, h4, h5, h6, p, figure, input, button {
@@ -60,7 +69,10 @@ a {
 
 #content {
   grid-area: content;
-  margin-left: var(--layout-gap-size);
+
+  &:has(+#sidebar) {
+    margin-left: var(--layout-gap-size);
+  }
 }
 
 #sidebar {
