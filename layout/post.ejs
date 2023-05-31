@@ -9,15 +9,16 @@
       <span class="publish-time">
         发布于：<time class="article-time"><%= page.date.format('YYYY-MM-DD HH:mm') %></time>
       </span>
-      <!--span class="update-time">
+      <span class="update-time" style="display: none;">
         更新于：<time class="article-time"><%= page.updated.format('YYYY-MM-DD HH:mm') %></time>
-      </span-->
+      </span>
+      <% if(page.next) {%>
+        <a href="<%= url_for(page.next.path) %>">
+        下一篇：<%- page.next.title %>
+        </a>
+      <% } %>
     </footer>
   </article>
-</div>
-
-<div id="paginator">
-  <%- paginator() %>
 </div>
 
 <%- partial('_partial/comment') %>

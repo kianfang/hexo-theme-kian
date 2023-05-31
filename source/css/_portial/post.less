@@ -7,12 +7,14 @@
   }
 
   &-footer {
-    padding-top: 1em;
+    margin-top: var(--layout-gap-size);
+    padding-top: var(--layout-gap-size);
     border-top: 1px solid var(--border-color);
     color: @gray-6;
     display: flex;
     flex-direction: row;
-    gap: 0 20px;
+    justify-content: space-between;
+    gap: 1em var(--layout-gap-size);
   }
 
   &-time {
@@ -20,7 +22,7 @@
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: 1000;
     line-height: 2em;
     padding-bottom: 0.2em;
