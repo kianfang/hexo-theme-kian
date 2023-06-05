@@ -12,7 +12,10 @@ pageTitle += ' [ ' + config.title + ' ]';
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0">
-  <title><%=pageTitle%></title>
+  <title><%= pageTitle %></title>
+  <% if(theme.favicon) { %>
+  <link rel="icon" href="<%= theme.favicon %>">
+  <% } %>
   <%- css('css/common.css') %>
   <%- is_home() ? css('css/home.css') : '' %>
   <%- is_post() ? css('css/article.css') : '' %>

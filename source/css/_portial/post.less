@@ -25,7 +25,7 @@
     margin: 1em 0;
     width: fit-content;
 
-    &:hover {
+    &:hover, &:focus, &:active {
       .headerlink {
         display: inline-block;
       }
@@ -150,6 +150,9 @@
   p {
     line-height: 1.6em;
     margin: 1em 0;
+    a {
+      padding: 0 0.2em;
+    }
   }
 
   table {
@@ -302,18 +305,6 @@
     overflow: auto;
     border-radius: 4px;
 
-    .gutter {
-      user-select: none;
-      position: sticky;
-      left: 0;
-
-      pre {
-        font-size: 0.85em;
-        text-align: right;
-        padding: 0 15px;
-      }
-    }
-
     pre {
       border: none;
       margin: 0;
@@ -343,6 +334,22 @@
       a {
         float: right;
       }
+    }
+
+    .gutter {
+      user-select: none;
+      position: sticky;
+      left: 0;
+
+      pre {
+        font-size: 0.85em;
+        text-align: right;
+        padding: 0 15px;
+      }
+    }
+
+    .code {
+      padding-right: 15px;
     }
   }
 
