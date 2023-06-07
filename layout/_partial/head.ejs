@@ -17,8 +17,16 @@ pageTitle += ' [ ' + config.title + ' ]';
   <link rel="icon" href="<%= theme.favicon %>">
   <% } %>
   <%- css('css/common.css') %>
-  <%- is_home() ? css('css/home.css') : '' %>
-  <%- is_post() ? css('css/article.css') : '' %>
-  <%- is_archive() ? css('css/archive.css') : '' %>
-  <%- is_page() ? css('css/page.css') : '' %>
+  <% if (is_home()) { %>
+  <%- css('css/home.css') %>
+  <% } %>
+  <% if (is_post()) { %>
+  <%- css('css/article.css') %>
+  <% } %>
+  <% if (is_archive()) { %>
+  <%- css('css/archive.css') %>
+  <% } %>
+  <% if (is_page()) { %>
+  <%- css('css/page.css') %>
+  <% } %>
 </head>

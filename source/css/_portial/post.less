@@ -1,6 +1,11 @@
 @import "./_variables.less";
 
 .article {
+  & > &-title {
+    margin-top: 0;
+    width: 100%;
+  }
+
   &-wrapper {
     display: flex;
     gap: 0 var(--layout-gap-size);

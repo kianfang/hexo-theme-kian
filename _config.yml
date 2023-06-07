@@ -15,7 +15,7 @@ menu:
 
 # scripts loaded in the end of the body
 scripts:
-- /js/common.mjs
+- /js/common.js
 
 widgets:
 - category

@@ -8,3 +8,6 @@
 <script type="<%= /.+\.mjs$/.test(url) ? 'module' : 'application/javascript' %>" src="<%=url%>"></script>
   <% }); %>
 <% } %>
+<% if (is_home()) { %>
+<script type="module" src="js/home.js"></script>
+<% } %>

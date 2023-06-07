@@ -65,9 +65,13 @@ a {
 
 #header {
   grid-area: header;
-  z-index: 3;
   position: sticky;
+  z-index: 3;
   top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--layout-gap-size);
 }
 
 #content {
@@ -88,11 +92,11 @@ a {
 
 #footer {
   grid-area: footer;
+  padding: var(--layout-gap-size);
 }
 
 #header, #footer {
   background-color: var(--header-bg-color);
-  padding: var(--layout-gap-size);
 
   &, a {
     color: @gray-1;
@@ -107,6 +111,7 @@ a {
 #menu {
   display: flex;
   flex-direction: row;
+  margin: var(--layout-gap-size) 0;
   gap: 0 10px;
   a {
     font-size: 14px;
@@ -150,5 +155,6 @@ a {
   }
 }
 
+@import "./_portial/avatar.less";
 @import "./_portial/widget.less";
 @import "./_portial/pagination.less";
